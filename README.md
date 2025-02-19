@@ -7,3 +7,7 @@ example
 
 {} 19/2/2025 Dhodi
 - menambahkan logo di responsif navbar
+
+{} 19/2/2025 Dhodi 
+- update halaman tentang kami
+- renovasi footer

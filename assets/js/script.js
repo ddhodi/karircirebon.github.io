@@ -25,3 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// HOver Icon
+const socialIcons = document.querySelectorAll(".social-icon i");
+
+// Loop setiap ikon dan tambahkan event listener
+socialIcons.forEach(icon => {
+  icon.addEventListener("mouseenter", function() {
+    this.classList.remove("text-secondary"); // Hapus warna abu-abu
+    this.classList.add("text-dark"); // Ubah menjadi hitam
+  });
+
+  icon.addEventListener("mouseleave", function() {
+    this.classList.remove("text-dark"); // Hapus warna hitam
+    this.classList.add("text-secondary"); // Kembalikan ke warna abu-abu
+  });
+});
+
