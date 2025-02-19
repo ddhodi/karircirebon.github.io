@@ -11,6 +11,12 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <!-- bootstrap icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -62,10 +68,10 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav ms-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="#" id="home">Beranda</a>
+                <a class="nav-link active" href="index.html" id="home">Beranda</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" id="features">Tentang Kami</a>
+                <a class="nav-link" href="about.html" id="features">Tentang Kami</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#" id="pricing">Upload Loker</a>
@@ -310,9 +316,70 @@
 
     <!-- footer -->
     <footer
-      class="bg-body-tertiary text-tertiary text-center py-3 mt-5 border-top border-tertiary"
+      class="bg-body-tertiary text-tertiary mt-5 border-top border-tertiary"
     >
-      <p class="mb-0">karircirebon@2025</p>
+      <section class="container">
+        <div class="row py-3 align-items-center">
+          <!-- Logo dan Navigasi -->
+          <div class="col-md-6">
+            <a class="footer-brand" href="#">
+              <img
+                src="assets/img/1.png"
+                alt="Logo"
+                width="250"
+                height="40"
+                class="d-inline-block align-text-top img-r"
+              />
+            </a>
+            <ul class="navbar-nav d-flex flex-row gap-2 mt-2 fot-r">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html" id="home">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="about.html" id="features"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" id="pricing">Pasang Loker</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Media Sosial -->
+          <div class="col-md-6 pt-3">
+            <h5 class="fw-semibold">Temukan Kami di :</h5>
+            <ul class="list-inline d-flex">
+              <li class="list-inline-item">
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-instagram icon-lg text-secondary"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-linkedin icon-lg text-secondary"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-telegram icon-lg text-secondary"></i
+                ></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-facebook icon-lg text-secondary"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="text-center border-top border-tertiary">
+        <p class="pt-3 fs-7">
+          karircirebon@2025 (sekawan_media). All Rights Reserved.
+        </p>
+      </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
