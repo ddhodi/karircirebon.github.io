@@ -28,6 +28,10 @@ body {
   font-size: 13px;
 }
 
+.pt-7 {
+  padding-top: 100px;
+}
+
 .pagination .page-item.active .page-link {
   background-color: #007bff; /* Set active background color */
   color: white; /* Set active text color */
