@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// HOver Icon
+// Hover Icon
 const socialIcons = document.querySelectorAll(".social-icon i");
 
 // Loop setiap ikon dan tambahkan event listener
@@ -41,15 +41,20 @@ socialIcons.forEach((icon) => {
   });
 });
 
-// mencegah agar teks tidak di copy
+// alert agar tidak di copy text
+function showPopup() {
+  var myModal = new bootstrap.Modal(document.getElementById("alertModal"));
+  myModal.show();
+}
+
 document.addEventListener("copy", function (e) {
   e.preventDefault();
-  alert("Copy tidak diizinkan!");
+  showPopup();
 });
 
 document.addEventListener("contextmenu", function (e) {
   e.preventDefault();
-  alert("Klik kanan dinonaktifkan!");
+  showPopup();
 });
 
 document.addEventListener("selectstart", function (e) {

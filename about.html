@@ -26,7 +26,7 @@
       rel="stylesheet"
     />
   </head>
-  <body oncontextmenu="return false" oncopy="return false" onselectstart="return false">
+  <body>
     <nav
       class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom border-tertiary"
     >
@@ -92,6 +92,25 @@
         </div>
       </div>
     </nav>
+
+    <!-- Alert text copy -->
+    <div class="modal fade" id="alertModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center">
+          <div class="modal-header">
+            <h5 class="modal-title text-danger">Peringatan!</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>Copy atau klik kanan tidak diizinkan di halaman ini.</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- about -->
     <section class="container pt-7">
@@ -177,16 +196,24 @@
             <h5 class="fw-semibold">Temukan Kami di :</h5>
             <ul class="list-inline d-flex">
               <li class="list-inline-item">
-                <a href="#" class="social-icon"><i class="bi bi-instagram icon-lg text-secondary"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-instagram icon-lg text-secondary"></i
+                ></a>
               </li>
               <li class="list-inline-item">
-                <a href="#" class="social-icon"><i class="bi bi-linkedin icon-lg text-secondary"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-linkedin icon-lg text-secondary"></i
+                ></a>
               </li>
               <li class="list-inline-item">
-                <a href="#" class="social-icon"><i class="bi bi-telegram icon-lg text-secondary"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-telegram icon-lg text-secondary"></i
+                ></a>
               </li>
               <li class="list-inline-item">
-                <a href="#" class="social-icon"><i class="bi bi-facebook icon-lg text-secondary"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="bi bi-facebook icon-lg text-secondary"></i
+                ></a>
               </li>
             </ul>
           </div>
@@ -194,7 +221,9 @@
       </section>
 
       <div class="text-center border-top border-tertiary">
-        <p class="pt-3 fs-7">karircirebon@2025 (sekawan_media). All Rights Reserved.</p>
+        <p class="pt-3 fs-7">
+          karircirebon@2025 (sekawan_media). All Rights Reserved.
+        </p>
       </div>
     </footer>
 
