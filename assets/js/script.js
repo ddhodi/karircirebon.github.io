@@ -29,15 +29,29 @@ document.addEventListener("DOMContentLoaded", function () {
 const socialIcons = document.querySelectorAll(".social-icon i");
 
 // Loop setiap ikon dan tambahkan event listener
-socialIcons.forEach(icon => {
-  icon.addEventListener("mouseenter", function() {
+socialIcons.forEach((icon) => {
+  icon.addEventListener("mouseenter", function () {
     this.classList.remove("text-secondary"); // Hapus warna abu-abu
     this.classList.add("text-dark"); // Ubah menjadi hitam
   });
 
-  icon.addEventListener("mouseleave", function() {
+  icon.addEventListener("mouseleave", function () {
     this.classList.remove("text-dark"); // Hapus warna hitam
     this.classList.add("text-secondary"); // Kembalikan ke warna abu-abu
   });
 });
 
+// mencegah agar teks tidak di copy
+document.addEventListener("copy", function (e) {
+  e.preventDefault();
+  alert("Copy tidak diizinkan!");
+});
+
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+  alert("Klik kanan dinonaktifkan!");
+});
+
+document.addEventListener("selectstart", function (e) {
+  e.preventDefault();
+});

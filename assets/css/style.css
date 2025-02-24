@@ -1,5 +1,7 @@
+/* mencegah teks tidak di copy */
 body {
   font-family: "Poppins", serif !important;
+  user-select: none; 
 }
 
 .nav-link.active {
