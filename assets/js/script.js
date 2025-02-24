@@ -44,8 +44,26 @@ socialIcons.forEach((icon) => {
 // alert agar tidak di copy text
 function showPopup() {
   var myModal = new bootstrap.Modal(document.getElementById("alertModal"));
-  myModal.show();
+  setTimeout(() => myModal.show(), 10);
 }
+
+document
+  .getElementById("alertModal")
+  .addEventListener("show.bs.modal", function () {
+    this.removeAttribute("inert");
+  });
+
+document
+  .getElementById("alertModal")
+  .addEventListener("hidden.bs.modal", function () {
+    this.setAttribute("inert", "");
+  });
+
+document
+  .getElementById("alertModal")
+  .addEventListener("shown.bs.modal", function () {
+    this.querySelector(".btn-close").focus();
+  });
 
 document.addEventListener("copy", function (e) {
   e.preventDefault();
