@@ -78,3 +78,18 @@ document.addEventListener("contextmenu", function (e) {
 document.addEventListener("selectstart", function (e) {
   e.preventDefault();
 });
+
+// button Ontop
+const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+window.onscroll = function () {
+  if (document.documentElement.scrollTop > 100) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+};
+
+scrollTopBtn.addEventListener("click", function () {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
