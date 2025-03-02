@@ -1,3 +1,19 @@
+// register app
+document.addEventListener("DOMContentLoaded", init, false);
+
+function init() {
+  if ("serviceWorker" in navigator && navigator.onLine) {
+    navigator.serviceWorker.register("/service-worker.js").then(
+      (reg) => {
+        console.log("Registrasi service worker Berhasil", reg);
+      },
+      (err) => {
+        console.error("Registrasi service worker Gagal", err);
+      }
+    );
+  }
+}
+
 // animation navbar
 document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll(".nav-link");
@@ -82,14 +98,15 @@ document.addEventListener("selectstart", function (e) {
 // button Ontop
 const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-window.onscroll = function () {
-  if (document.documentElement.scrollTop > 100) {
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
     scrollTopBtn.style.display = "block";
   } else {
     scrollTopBtn.style.display = "none";
   }
-};
+});
 
-scrollTopBtn.addEventListener("click", function () {
+scrollTopBtn.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
